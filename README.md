@@ -2,6 +2,10 @@
 
 Repositório dedicado a experimentos e aprendizado com o Robot Framework. Este projeto apresenta exemplos práticos de automação para APIs e interfaces web, explorando funcionalidades como organização de casos de teste, uso de bibliotecas externas e boas práticas de automação.
 
+## Pré-requisitos
+
+Certifique-se de ter o **Docker** e o **Docker Compose** instalados em sua máquina antes de começar. Caso não tenha, acesse a [documentação oficial do Docker](https://docs.docker.com/get-docker/) para instalar.
+
 ## Ambiente Containerizado
 
 Este repositório inclui um ambiente totalmente containerizado, permitindo executar os testes sem a necessidade de instalar dependências ou configurar o Robot Framework na máquina local. Basta ter Docker e Docker Compose instalados para começar.
