@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  robotframework:
+    build: .
+    container_name: ambiente_robot
+    volumes:
+      - ./tests:/app/tests
+    stdin_open: true # Permite entrada interativa (bash)
+    tty: true # Garante que o terminal fique ativo
+    command: bash
+
+

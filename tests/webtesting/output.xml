@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.13.1 on linux)" generated="2025-01-02T04:39:17.954676" rpa="false" schemaversion="5">
+<suite id="s1" name="Amazon Testes" source="/app/tests/webtesting/amazon_testes.robot">
+<test id="s1-t1" name="Caso de teste 01 - Acesso ao menu &quot;Eletrônicos&quot;" line="9">
+<kw name="Abrir o navegador" owner="amazon_resources" type="SETUP">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2025-01-02T04:39:18.157127" level="INFO">${options} = &lt;selenium.webdriver.chrome.options.Options object at 0x7fe85a9ed2b0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys, selenium.webdriver</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2025-01-02T04:39:18.156749" elapsed="0.000427"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--headless</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-02T04:39:18.157392" elapsed="0.000194"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--no-sandbox</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-02T04:39:18.157731" elapsed="0.000215"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--disable-dev-shm-usage</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="PASS" start="2025-01-02T04:39:18.158104" elapsed="0.000172"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<msg time="2025-01-02T04:39:18.158717" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="PASS" start="2025-01-02T04:39:18.158474" elapsed="0.335686"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-02T04:39:18.494671" level="INFO">Opening url 'https://www.amazon.com.br'</msg>
+<arg>${url}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-02T04:39:18.494463" elapsed="0.694392"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-02T04:39:19.189086" elapsed="0.023289"/>
+</kw>
+<status status="PASS" start="2025-01-02T04:39:18.155623" elapsed="1.057005"/>
+</kw>
+<kw name="Acessar o home page da Amazon" owner="amazon_resources">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-01-02T04:39:19.213824" level="INFO">Opening url 'https://www.amazon.com.br'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-01-02T04:39:19.213608" elapsed="1.609221"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>${MENU_ELETRONICOS}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2025-01-02T04:39:20.823065" elapsed="0.045672"/>
+</kw>
+<status status="PASS" start="2025-01-02T04:39:19.213070" elapsed="1.655849"/>
+</kw>
+<kw name="Fechar o navegador" owner="amazon_resources" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-02T04:39:20.870476" elapsed="0.100211"/>
+</kw>
+<status status="PASS" start="2025-01-02T04:39:20.870005" elapsed="0.100839"/>
+</kw>
+<doc>Esse teste verifica se o menu "Eletrônicos" do site da Amazon.com.br
+e verifica se a categoria "Computadores e Informática" está disponível.</doc>
+<tag>categorias</tag>
+<tag>menus</tag>
+<status status="PASS" start="2025-01-02T04:39:18.154053" elapsed="2.816958"/>
+</test>
+<doc>Esta suite testa o site da Amazon.com.br</doc>
+<status status="PASS" start="2025-01-02T04:39:17.955752" elapsed="3.015997"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">categorias</stat>
+<stat pass="1" fail="0" skip="0">menus</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Amazon Testes">Amazon Testes</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
