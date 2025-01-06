@@ -52,3 +52,22 @@ Clicar no botão de pesquisa
 
 Verificar o resultado da Pesquisa se está listando o produto "${PRODUTO}"
     Wait Until Element Is Visible    //h2[@aria-label='PlayStation®5 Slim Edição Digital com 2 Jogos'][contains(.,'${PRODUTO}')]
+
+
+# GHERKIN STEPS
+
+Dado que eu acesso o home page da Amazon
+    Acessar o home page da Amazon
+    Verificar se o título da página é "Amazon.com.br | Tudo pra você, de A a Z."
+    Entrar no menu "Eletrônicos"  
+
+Quando eu digito o nome de produto "PlayStation®5 Slim Edição Digital com 2 Jogos" no campo de pesquisa
+    Digitar o nome de produto "PlayStation®5 Slim Edição Digital com 2 Jogos" no campo de pesquisa
+    Clicar no botão de pesquisa
+
+Então o título da página deve ser "Amazon.com.br : PlayStation®5 Slim Edição Digital com 2 Jogos"
+    Verificar se o título da página é "Amazon.com.br : PlayStation®5 Slim Edição Digital com 2 Jogos"
+
+E um produto da linha "PlayStation®5 Slim Edição Digital com 2 Jogos" deve ser listado
+    Verificar o resultado da Pesquisa se está listando o produto "PlayStation®5 Slim Edição Digital com 2 Jogos"
+
