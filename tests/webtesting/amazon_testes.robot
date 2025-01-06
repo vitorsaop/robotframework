@@ -18,10 +18,13 @@ Caso de teste 01 - Acesso ao menu "Eletrônicos"
     Verificar se aparece a categoria "Computadores e Informática"
     Verificar se aparece a categoria "Celulares e Comunicação"
 
-#Caso de teste 02 - Pesquisa de um Produto
-#    [Documentation]    Esse teste verifica a busca de um produto.
-#    [Tags]             busca_produtos  lista_busca
-#    Acessar a home page da Amazon
-#    Digitar o nome de produto "Xbox Seroes S" no campo de pesquisa
-#    clicar no botão de pesquisa
-#    Verificar o resultado da Pesquisa se está listando o produto pesquisado. 
+Caso de teste 02 - Pesquisa de um Produto
+    [Documentation]    Esse teste verifica a busca de um produto.
+    [Tags]             busca_produtos  lista_busca
+    Acessar o home page da Amazon
+    Digitar o nome de produto "play station 5" no campo de pesquisa
+    Clicar no botão de pesquisa
+    Verificar o resultado da Pesquisa se está listando o produto "PlayStation®5 Slim Edição Digital com 2 Jogos"
+
+
+    

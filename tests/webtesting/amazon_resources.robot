@@ -19,6 +19,7 @@ Abrir o navegador
     Maximize Browser Window
 
 Fechar o navegador
+    Capture Page Screenshot
     Close Browser
 
 Acessar o home page da Amazon
@@ -42,3 +43,12 @@ Verificar se o título da página é "${TITULO}"
 Verificar se aparece a categoria "${NOME_CATEGORIA}"
     Wait Until Page Contains Element    //div[@class='dcl-container d-page-type-browse d-widget-group-dossier-browse d-visual-nav dcl-centered'][contains(.,'${NOME_CATEGORIA}')]  timeout=10s
     Element Should Be Visible    //div[@class='dcl-container d-page-type-browse d-widget-group-dossier-browse d-visual-nav dcl-centered'][contains(.,'${NOME_CATEGORIA}')]  timeout=10s
+
+Digitar o nome de produto "${PRODUTO}" no campo de pesquisa
+    Input Text   //input[@id='twotabsearchtextbox']    ${PRODUTO}
+
+Clicar no botão de pesquisa
+    Click Element    //input[@id='nav-search-submit-button']
+
+Verificar o resultado da Pesquisa se está listando o produto "${PRODUTO}"
+    Wait Until Element Is Visible    //h2[@aria-label='PlayStation®5 Slim Edição Digital com 2 Jogos'][contains(.,'${PRODUTO}')]
